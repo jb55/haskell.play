@@ -1,6 +1,8 @@
 import Control.Monad
 import System.Random
 
+type FType = Float
+
 defaultThreshold :: (Floating a) => a
 defaultThreshold = 0.2
 
@@ -58,8 +60,8 @@ initialWeights nb = do
   let interval = randomR (-0.5, -0.5)
   replicateM nb (getStdRandom interval)
    
-andGate = [([0,0],0),([0,1],0),([1,0],0),([1,1],1)] :: [([Double], Double)]
-orGate = [([0,0],0),([0,1],1),([1,0],1),([1,1],1)] :: [([Double], Double)]
+andGate = [([0,0],0),([0,1],0),([1,0],0),([1,1],1)] :: [([FType], FType)]
+orGate = [([0,0],0),([0,1],1),([1,0],1),([1,1],1)] :: [([FType], FType)]
 
 neuron = neuronOutput defaultThreshold
 
