@@ -30,7 +30,7 @@ energy v h p = vToV - hToH - vToH
     vToV = -0.5 * ((trans v) * lv)
     hToH = 0.5 * ((trans h) * jh)
     vToH = (trans v) * wh
-    lv = (snd3 p) * h
+    lv = (snd3 p) * v
     jh = (thd3 p) * h
     wh = (fst3 p) * h
 --
